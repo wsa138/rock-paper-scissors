@@ -1,3 +1,20 @@
+let rockButton = document.querySelector('#rock');
+let paperButton = document.querySelector('#paper');
+let scissorsButton = document.querySelector('#scissors');
+
+rockButton.addEventListener("click", function() {
+    game('rock');
+});
+paperButton.addEventListener("click", function() {
+    game('paper');
+});
+scissorsButton.addEventListener("click", function() {
+    game('scissors');
+});
+
+
+
+
 function computerSelect() {
     //Randomly selects either rock, paper, or scissors//
     let pick = Math.floor(Math.random() * 3);
@@ -22,39 +39,48 @@ function playRound(playerSelection, computerSelection) {
     //Takes user and computer input to play a round of the game//
     if (playerSelection == "rock") {
         if (computerSelection == "scissors") {
-            return "Winner! Rock beats Scissors";
+            let result = (document.querySelector('#result').textContent = 'Winner');
+            return result;
         } else if (computerSelection == "paper") {
-            return "Loser! Paper beats Rock";
+            let result = (document.querySelector('#result').textContent = 'Loser');
+            return result;
         } else if (computerSelection == "rock") {
-            return "Tie!";
+            let result = (document.querySelector('#result').textContent = 'Tie');
+            return result;
         }
     } else if (playerSelection == "paper") {
         if (computerSelection == "rock") {
-            return "Winner! Paper beats Rock";
+            let result = (document.querySelector('#result').textContent = 'Winner');
+            return result;
         } else if (computerSelection == "scissors") {
-            return "Loser! Scissors beats Paper";
+            let result = (document.querySelector('#result').textContent = 'Loser');
+            return result;
         } else if (computerSelection == "paper") {
-            return "Tie!";
+            let result = (document.querySelector('#result').textContent = 'Tie');
+            return result;
         }
     } else if (playerSelection == "scissors") {
         if (computerSelection == "paper") {
-            return "Winner! Scissors beats Paper";
+            let result = (document.querySelector('#result').textContent = 'Winner');
+            return result;
         } else if (computerSelection == "rock") {
-            return "Loser! Rock beats Scissors";
+            let result = (document.querySelector('#result').textContent = 'Loser');
+            return result;
         } else if (computerSelection == "scissors") {
-            return "Tie!";
+            let result = (document.querySelector('#result').textContent = 'Tie');
+            return result;
         }
     }
 }
 
-function game() {
+function game(pick) {
     //Main game function. Plays 5 rounds and displays winner or loses.
     wins = 0;
     losses = 0;
     ties = 0;
     for (i = 0; i < 1; i++) {
         //Loops playRound() five times//
-        let player1 = playerSelect();
+        let player1 = pick;
         let computer1 = computerSelect();
         let round = playRound(player1, computer1);
         incrementScore(round);
