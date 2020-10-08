@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock-Paper_Sissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
     <script>
         function computerSelect() {
@@ -26,7 +31,7 @@
             //Takes user and computer input to play a round of the game//
             if (playerSelection == "rock") {
                 if (computerSelection == "scissors") {
-                    return "Winnder! Rock beats Scissors";
+                    return "Winner! Rock beats Scissors";
                 } else if (computerSelection == "paper") {
                     return "Loser! Paper beats Rock";
                 } else if (computerSelection == "rock") {
@@ -34,7 +39,7 @@
                 }
             } else if (playerSelection == "paper") {
                 if (computerSelection == "rock") {
-                    return "Winnder! Paper beats Rock";
+                    return "Winner! Paper beats Rock";
                 } else if (computerSelection == "scissors") {
                     return "Loser! Scissors beats Paper";
                 } else if (computerSelection == "paper") {
@@ -42,7 +47,7 @@
                 }
             } else if (playerSelection == "scissors") {
                 if (computerSelection == "paper") {
-                    return "Winnder! Scissors beats Paper";
+                    return "Winner! Scissors beats Paper";
                 } else if (computerSelection == "rock") {
                     return "Loser! Rock beats Scissors";
                 } else if (computerSelection == "scissors") {
@@ -62,7 +67,6 @@
                 let computer1 = computerSelect();
                 let round = playRound(player1, computer1);
                 incrementScore(round);
-                console.log(round);
             }
             displayWinner(wins, losses)      
         }
