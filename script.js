@@ -36,42 +36,52 @@ function playerSelect() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    //Takes user and computer input to play a round of the game//
+    //Takes user and computer input to play a round of the game
     if (playerSelection == "rock") {
         if (computerSelection == "scissors") {
-            let result = (document.querySelector('#result').textContent = 'Winner');
+            let result = (document.querySelector('#result').textContent = 'Winner!\
+            Rock beats Scissors');
             return result;
         } else if (computerSelection == "paper") {
-            let result = (document.querySelector('#result').textContent = 'Loser');
+            let result = (document.querySelector('#result').textContent = 'Loser, \
+            Paper beats Rock');
             return result;
         } else if (computerSelection == "rock") {
-            let result = (document.querySelector('#result').textContent = 'Tie');
+            let result = (document.querySelector('#result').textContent = 'Tie! \
+            You both picked Rock');
             return result;
         }
     } else if (playerSelection == "paper") {
         if (computerSelection == "rock") {
-            let result = (document.querySelector('#result').textContent = 'Winner');
+            let result = (document.querySelector('#result').textContent = 'Winner! \
+            Paper beats Rock');
             return result;
         } else if (computerSelection == "scissors") {
-            let result = (document.querySelector('#result').textContent = 'Loser');
+            let result = (document.querySelector('#result').textContent = 'Loser, \
+            Scissors beats Paper');
             return result;
         } else if (computerSelection == "paper") {
-            let result = (document.querySelector('#result').textContent = 'Tie');
+            let result = (document.querySelector('#result').textContent = 'Tie! \
+            You both picked Paper');
             return result;
         }
     } else if (playerSelection == "scissors") {
         if (computerSelection == "paper") {
-            let result = (document.querySelector('#result').textContent = 'Winner');
+            let result = (document.querySelector('#result').textContent = 'Winner! \
+            Scissors beats Paper');
             return result;
         } else if (computerSelection == "rock") {
-            let result = (document.querySelector('#result').textContent = 'Loser');
+            let result = (document.querySelector('#result').textContent = 'Loser, \
+            Rock beats Scissors');
             return result;
         } else if (computerSelection == "scissors") {
-            let result = (document.querySelector('#result').textContent = 'Tie');
+            let result = (document.querySelector('#result').textContent = 'Tie! \
+            You both picked Scissors');
             return result;
         }
     }
 }
+
 
 function game(pick) {
     //Main game function. Plays 5 rounds and displays winner or loses.
