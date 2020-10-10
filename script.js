@@ -37,41 +37,41 @@ function playRound(playerSelection, computerSelection) {
     //Takes user and computer input to play a round of the game, display round results.
     if (playerSelection == "rock") {
         if (computerSelection == "scissors") {
-            let result = (document.querySelector('#result').textContent = 'Winner!\
+            (document.querySelector('#result').textContent = 'Winner!\
             Rock beats Scissors');
             won++;
         } else if (computerSelection == "paper") {
-            let result = (document.querySelector('#result').textContent = 'Loser, \
+            (document.querySelector('#result').textContent = 'Loser, \
             Paper beats Rock');
             lost++;
         } else if (computerSelection == "rock") {
-            let result = (document.querySelector('#result').textContent = 'Tie! \
+            (document.querySelector('#result').textContent = 'Tie! \
             You both picked Rock');
         }
     } else if (playerSelection == "paper") {
         if (computerSelection == "rock") {
-            let result = (document.querySelector('#result').textContent = 'Winner! \
+            (document.querySelector('#result').textContent = 'Winner! \
             Paper beats Rock');
             won++;
         } else if (computerSelection == "scissors") {
-            let result = (document.querySelector('#result').textContent = 'Loser, \
+            (document.querySelector('#result').textContent = 'Loser, \
             Scissors beats Paper');
             lost++;
         } else if (computerSelection == "paper") {
-            let result = (document.querySelector('#result').textContent = 'Tie! \
+            (document.querySelector('#result').textContent = 'Tie! \
             You both picked Paper');
         }
     } else if (playerSelection == "scissors") {
         if (computerSelection == "paper") {
-            let result = (document.querySelector('#result').textContent = 'Winner! \
+            (document.querySelector('#result').textContent = 'Winner! \
             Scissors beats Paper');
             won++;
         } else if (computerSelection == "rock") {
-            let result = (document.querySelector('#result').textContent = 'Loser, \
+            (document.querySelector('#result').textContent = 'Loser, \
             Rock beats Scissors');
             lost++;
         } else if (computerSelection == "scissors") {
-            let result = (document.querySelector('#result').textContent = 'Tie! \
+            (document.querySelector('#result').textContent = 'Tie! \
             You both picked Scissors');
         }
     }
@@ -89,7 +89,25 @@ function game(pick) {
         let computer1 = computerSelect();
         let round = playRound(player1, computer1);
         document.getElementById('score').innerHTML = `Wins: ${won}  Losses: ${lost}`;
-    }   
+        if (checkWinLoss(won, lost)) {
+            won = 0;
+            lost = 0;
+        } else {
+            continue;
+        }
+    }  
 }
 
+
+function checkWinLoss(w, l) {
+    if (w === 3) {
+        document.querySelector('#result').textContent = `You are the Winner! 3-${lost}`;
+        return true;
+    } else if (l === 3) {
+        document.querySelector('#result').textContent = `Sorry, you lost. ${won}-3`;
+        return true;
+    } else {
+        return false;
+    }
+}
 
