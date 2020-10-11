@@ -1,1 +1,1 @@
-A rock-paper-scissors game. The game is played between the user and the computer. 5 rounds are played with the winner displayed at the end. 
+A rock-paper-scissors game. The game is played between the user and the computer. First to 3 wins is the winner.
