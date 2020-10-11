@@ -2,33 +2,37 @@
 
 body {
     background-color: grey;
+    color: #E8DDB5;
+
 }
 
 #gameArea {
-    background-color: rgb(89, 215, 231);
+    background-color: #92B6B1;
     font-family: 'Chewy', cursive;
     font-size: x-large; 
-    height: 22.5em;
+    height: 21em;
     width: 25em;
     margin: auto;
+    outline: 5px solid  #92B6B1;
 }
 
 #gameTitle {
-    background-color: red;
+    background-color: #788AA3;
     text-align: center;
     font-size: xxx-large;
-    padding: .5em;
+    padding-top:.5em;
+    text-decoration: underline;    
 }
 
 #instruction {
-    background-color: purple;
+    background-color:#788AA3;
     text-align: center;
-    padding: .5em;
+    padding-bottom: 1em;
     font-size: xx-large;
 }
 
 .btnGroup {
-    background-color: green;
+    background-color: ;
     display: flex;
     flex-direction: row;
     padding: .5em;
@@ -40,17 +44,24 @@ body {
     padding: 3px;
     border-radius: 20px;
     width: 20%;
+    background-color: #788AA3;
+    color: #E8DDB5;
+    font-weight: 600;
 }
 
 #result {
-    background-color: yellow;
+    background-color: #788AA3;
     text-align: center;
-    padding: .5em;
+    padding-top: 1em;
     font-size: xx-large;
 }
 
 #score {
-    background-color: pink;
+    background-color: #788AA3;
     text-align: center;
-    padding: .5em;
+    padding-bottom: .5em;
+}
+
+.titleResultGroup {
+    background-color: #788AA3;
 }
